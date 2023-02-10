@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Define the boundary coordinates for the five areas
 x1_min=487
 x1_max=595
@@ -27,8 +26,6 @@ x5_max=980
 y5_min=359
 y5_max=413
 
-
-
 # Define function to randomly generate coordinates from bound coordinates
 generate_random_coordinate() {
   local x_min=$1
@@ -36,13 +33,11 @@ generate_random_coordinate() {
   local y_min=$3
   local y_max=$4
 
-
   local x=$(($RANDOM * ($x_max - $x_min + 1) / 32767 + $x_min))
   local y=$(($RANDOM * ($y_max - $y_min + 1) / 32767 + $y_min))
 
   echo "$x $y"
 }
-
 
 for j in {1..100}
 do
@@ -70,4 +65,3 @@ do
 		sleep $sleep_time
 	done
 done
-
