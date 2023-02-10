@@ -29,7 +29,7 @@ y5_max=413
 
 
 
-# Define function to randomly generate coordinates out of bound areas
+# Define function to randomly generate coordinates from bound coordinates
 generate_random_coordinate() {
   local x_min=$1
   local x_max=$2
